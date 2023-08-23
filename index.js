@@ -14,6 +14,10 @@ app.get("/tshirt", (req, res) => {
   })
 });
 
+app.get("/main", (req, res) => {
+  res.send("Hello World!")
+});
+
 app.post("/tshirt/:id", (req, res) => {
   const { id } = req.params;
   const { logo } = req.body;
