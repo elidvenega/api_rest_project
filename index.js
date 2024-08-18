@@ -1,4 +1,5 @@
-const express = require("express");
+import express from "express";
+// const express = require("express");
 const app = express();
 const PORT = 3000;
 
@@ -11,11 +12,15 @@ app.get("/tshirt", (req, res) => {
     tshirt: "👕",
     size: "large",
     transaction: "Success",
-  })
+  });
 });
 
 app.get("/main", (req, res) => {
-  res.send("Hello World!")
+  res.send(`
+    <h1>Hello</h1>
+    <p>nkjnkjnkjnknkn</p>
+    
+    `);
 });
 
 app.post("/tshirt/:id", (req, res) => {
@@ -30,11 +35,3 @@ app.post("/tshirt/:id", (req, res) => {
     tshirt: `👕 with your ${logo} and with ID of ${id}`,
   });
 });
-
-
-
-
-
-
-
-
